@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definimos un elemento raíz 'recetario' -->
+    <xs:element name="recetario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="receta" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="descripcion" type="xs:string"/>
+                            <xs:element name="ingredientes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingrediente" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="cantidad" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="preparacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="paso" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="informacion_adicional">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dificultad" type="xs:string"/>
+                                        <xs:element name="tipo_cocina" type="xs:string"/>
+                                        <xs:element name="raciones" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                        <xs:attribute name="tiempo_total" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
