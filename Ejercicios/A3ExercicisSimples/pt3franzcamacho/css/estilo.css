@@ -1,0 +1,62 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header y Navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+}
+
+header img {
+    width: 100px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #007BFF;
+}
+
+/* Sección de recetas destacadas en la página principal */
+.recetas-destacadas img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
