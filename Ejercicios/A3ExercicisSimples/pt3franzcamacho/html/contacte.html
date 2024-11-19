@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+<header>
+    <img src="../img/Logo-Delicias.png" alt="Delicias Kitchen">
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="en_construccion.html">Sobre mí</a></li>
+            <li><a href="llista_receptes.html">Recetas</a></li>
+            <li><a href="contacte.html">Contacto</a></li>
+            <li><a href="en_construccion.html">Otras cosas</a></li>
+        </ul>
+    </nav>
+</header>
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - En Construcción</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <header>
-        <img src="../img/logo.png" alt="Logo de la Empresa">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="recepta.html">Receta</a>
-            <a href="llista_receptes.html">Lista de Recetas</a>
-            <a href="contacte.html">Contacto</a>
-        </nav>
+        <h1>Formulario de Contacto</h1>
     </header>
-
     <main>
-        <h1>Contacto</h1>
-        <p>Esta sección está en construcción.</p>
+        <form action="submit.html" method="GET">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <br>
+            <label for="receta">Adjunta una Receta (opcional):</label>
+            <input type="file" id="receta" name="receta">
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Recetas. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>

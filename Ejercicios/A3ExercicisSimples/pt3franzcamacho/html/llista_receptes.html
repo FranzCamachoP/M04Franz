@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+<header>
+    <img src="../img/Logo-Delicias.png" alt="Delicias Kitchen">
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="en_construccion.html">Sobre mí</a></li>
+            <li><a href="llista_receptes.html">Recetas</a></li>
+            <li><a href="contacte.html">Contacto</a></li>
+            <li><a href="en_construccion.html">Otras cosas</a></li>
+        </ul>
+    </nav>
+</header>
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +21,27 @@
 </head>
 <body>
     <header>
-        <h1>Lista de recetas</h1>
+        <h1>Lista de Recetas</h1>
+        <h1>semblen la mateixa recepta, pero en veritat no</h1>
     </header>
-    
-    <section>
-        <ul>
-            <li><img src="../img/barritas.jpg" alt="Barritas" width="100"> <a href="recepta.html">Receta de Barritas</a></li>
-            <li><img src="../img/calabacines.jpg" alt="Calabacines" width="100"> <a href="recepta.html">Receta de Calabacines</a></li>
-            <li><img src="../img/galletas.jpg" alt="Galletas" width="100"> <a href="recepta.html">Receta de Galletas</a></li>
-            <li><img src="../img/mijo.jpg" alt="Mijo" width="100"> <a href="recepta.html">Receta de Mijo</a></li>
-        </ul>
-    </section>
+    <main>
+        <section class="listado">
+            <article>
+                <h3><a href="recepta.html">Pasta con Salsa de Coliflor</a></h3>
+                <p>Tiempo: 30 minutos</p>
+                <p>Dificultad: Media</p>
+            </article>
+            <article>
+                <h3><a href="recepta.html">Galletas de Avena</a></h3>
+                <p>Tiempo: 40 minutos</p>
+                <p>Dificultad: Fácil</p>
+            </article>
+        </section>
+        <nav class="pagination">
+            <a href="#" class="prev">Prev</a>
+            <span class="current">1</span>
+            <a href="#" class="next">Next</a>
+        </nav>
+    </main>
 </body>
 </html>
