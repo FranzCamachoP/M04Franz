@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #000; 
     background-color: #fff;
 }
 
@@ -32,7 +32,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #7ABA96;
+    color: #000; 
     font-weight: bold;
 }
 
@@ -98,12 +98,13 @@ section.recetas article img {
 }
 
 section.recetas article h3 {
-    color: #7ABA96;
+    color: #000; 
     font-size: 18px;
     margin: 10px 0;
 }
 
 section.recetas article p {
+    color: #000; 
     margin: 5px 0;
 }
 
@@ -125,11 +126,13 @@ section.recetas article p {
     list-style: square;
     text-align: left;
     padding: 0 20px;
+    color: #000; 
 }
 
 .receta ol {
     text-align: left;
     padding: 0 20px;
+    color: #000; 
 }
 
 /* Listado de recetas */
@@ -142,7 +145,7 @@ section.recetas article p {
 
 .listado article h3 a {
     text-decoration: none;
-    color: #7ABA96;
+    color: #000; 
     font-weight: bold;
 }
 
@@ -161,7 +164,7 @@ section.recetas article p {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid #ddd;
-    color: #7ABA96;
+    color: #000; 
     font-weight: bold;
 }
 
@@ -190,6 +193,7 @@ form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #000; 
 }
 
 form input, form textarea, form button {
@@ -198,6 +202,7 @@ form input, form textarea, form button {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
+    color: #000; 
 }
 
 form button {
@@ -238,51 +243,16 @@ footer .footer-links a:hover {
     color: #7ABA96;
 }
 
-/* General */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #fff;
-}
-
 /* Página En Construcción */
 main {
     text-align: center;
     margin: 50px;
     font-size: 18px;
-    color: #555;
+    color: #000;
 }
 
 main p {
     margin-top: 20px;
     font-size: 16px;
-    color: #7ABA96;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    padding: 20px 0;
-    color: #fff;
-    text-align: center;
-}
-
-footer .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-footer .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-footer .footer-links a:hover {
     color: #7ABA96;
 }
