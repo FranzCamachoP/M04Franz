@@ -7,51 +7,25 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <header>
-        <img src="../img/Logo-Delicias.png" alt="Delicias Kitchen">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="en_construccion.html">Sobre mí</a></li>
-                <li><a href="llista_receptes.html">Recetas</a></li>
-                <li><a href="contacte.html">Contacto</a></li>
-                <li><a href="en_construccion.html">Otras cosas</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="recetas-container"></div>
 
-    <main>
-        <h1>Lista de Recetas</h1>
-        <section class="listado">
-            <article>
-                <img src="../img/Pasta.jpg" alt="Pasta con Salsa de Coliflor" class="receta-img">
-                <h3><a href="recepta_pasta.html">Pasta con Salsa de Coliflor</a></h3>
-                <p>Tiempo: 30 minutos</p>
-                <p>Dificultad: Media</p>
-            </article>
-            <article>
-                <img src="../img/galletas.jpg" alt="Galletas de Avena" class="receta-img">
-                <h3><a href="recepta_galletas.html">Galletas de Avena</a></h3>
-                <p>Tiempo: 40 minutos</p>
-                <p>Dificultad: Fácil</p>
-            </article>
-        </section>
-        <nav class="pagination">
-            <a href="#" class="prev">Prev</a>
-            <span class="current">1</span>
-            <a href="#" class="next">Next</a>
-        </nav>
-    </main>
+    <script>
+        const xsltProcessor = new XSLTProcessor();
+        const parser = new DOMParser();
 
-    <footer>
-        <div class="footer-links">
-            <a href="en_construccion.html">FACEBOOK</a>
-            <a href="en_construccion.html">TWITTER</a>
-            <a href="en_construccion.html">INSTAGRAM</a>
-            <a href="en_construccion.html">PINTEREST</a>
-            <a href="en_construccion.html">EMAIL</a>
-            <a href="en_construccion.html">RSS</a>
-        </div>
-    </footer>
+        fetch('recetas.xsl')
+            .then(res => res.text())
+            .then(xslData => {
+                const xslDoc = parser.parseFromString(xslData, 'application/xml');
+                xsltProcessor.importStylesheet(xslDoc);
+                return fetch('recetas.xml');
+            })
+            .then(res => res.text())
+            .then(xmlData => {
+                const xmlDoc = parser.parseFromString(xmlData, 'application/xml');
+                const resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+                document.getElementById('recetas-container').appendChild(resultDocument);
+            });
+    </script>
 </body>
 </html>

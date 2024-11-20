@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <!-- Receta 1 -->
+    <receta>
+        <titulo>Pasta con salsa de coliflor</titulo>
+        <tiempo>30 minutos</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>Pasta.jpg</imagen>
+        <descripcion>Una salsa vegana para la pasta, tan sabrosa y cremosa que resulta irresistible...</descripcion>
+    </receta>
+
+    <!-- Receta 2 -->
+    <receta>
+        <titulo>Galletas de avena</titulo>
+        <tiempo>40 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>galletas.jpg</imagen>
+        <descripcion>Estas galletas ricas y crujientes son perfectas para San Valentín...</descripcion>
+    </receta>
+
+    <receta>
+        <titulo>Receta X</titulo>
+        <tiempo>20 minutos</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>imagenX.jpg</imagen>
+        <descripcion>Descripción de la receta...</descripcion>
+    </receta>
+    <receta>
+        <titulo>Pasta con salsa de coliflor</titulo>
+        <tiempo>30 minutos</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>pasta.jpg</imagen>
+        <descripcion>Una salsa vegana para la pasta, tan sabrosa y cremosa que resulta irresistible...</descripcion>
+    </receta>
+    <receta>
+        <titulo>Galletas de avena</titulo>
+        <tiempo>40 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>galletas.jpg</imagen>
+        <descripcion>Estas galletas ricas y crujientes son perfectas para San Valentín...</descripcion>
+    </receta>
+    <receta>
+        <titulo>Mijo cremoso con lentejas</titulo>
+        <tiempo>25 minutos</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>mijo.jpg</imagen>
+        <descripcion>Un buen plato de mijo cremoso con lentejas y hortalizas...</descripcion>
+    </receta>
+    <receta>
+        <titulo>Calabacines rellenos de arroz negro</titulo>
+        <tiempo>35 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>calabacines.jpg</imagen>
+        <descripcion>Calabacines rellenos de arroz negro y calabaza para un plato delicioso y saludable...</descripcion>
+    </receta>
+    <receta>
+        <titulo>Ensalada de quinoa y mango</titulo>
+        <tiempo>20 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>quinoa.jpg</imagen>
+        <descripcion>Refrescante ensalada de quinoa con mango, aguacate y cilantro.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Sopa de lentejas rojas</titulo>
+        <tiempo>45 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>sopa.jpg</imagen>
+        <descripcion>Reconfortante sopa de lentejas rojas con un toque de cúrcuma.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Pan integral casero</titulo>
+        <tiempo>2 horas</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>pan.jpg</imagen>
+        <descripcion>Pan integral esponjoso y lleno de sabor, perfecto para desayunos.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Batido verde detox</titulo>
+        <tiempo>5 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>batido.jpg</imagen>
+        <descripcion>Batido refrescante con espinacas, piña y plátano para empezar el día.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Albóndigas veganas</titulo>
+        <tiempo>50 minutos</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>albondigas.jpg</imagen>
+        <descripcion>Albóndigas sin carne hechas con garbanzos y especias.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Pizza de masa de coliflor</titulo>
+        <tiempo>1 hora</tiempo>
+        <dificultad>Difícil</dificultad>
+        <imagen>pizza.jpg</imagen>
+        <descripcion>Pizza saludable con base de coliflor y verduras frescas.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Tacos de portobello</titulo>
+        <tiempo>30 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>tacos.jpg</imagen>
+        <descripcion>Tacos sabrosos rellenos de champiñones portobello y aguacate.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Smoothie de frutos rojos</titulo>
+        <tiempo>10 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>smoothie.jpg</imagen>
+        <descripcion>Delicioso y antioxidante smoothie con fresas, arándanos y yogur.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Paella vegana</titulo>
+        <tiempo>1 hora</tiempo>
+        <dificultad>Difícil</dificultad>
+        <imagen>paella.jpg</imagen>
+        <descripcion>Un clásico español con un giro vegano, lleno de sabor y color.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Curry de garbanzos</titulo>
+        <tiempo>35 minutos</tiempo>
+        <dificultad>Fácil</dificultad>
+        <imagen>curry.jpg</imagen>
+        <descripcion>Sabroso curry de garbanzos con leche de coco y especias aromáticas.</descripcion>
+    </receta>
+    <receta>
+        <titulo>Hamburguesas de lentejas</titulo>
+        <tiempo>45 minutos</tiempo>
+        <dificultad>Media</dificultad>
+        <imagen>hamburguesas.jpg</imagen>
+        <descripcion>Hamburguesas saludables y sabrosas hechas con lentejas y avena.</descripcion>
+    </receta>
+
+</recetas>
