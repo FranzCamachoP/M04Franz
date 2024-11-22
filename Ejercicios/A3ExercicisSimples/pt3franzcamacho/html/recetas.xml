@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recetas>
-    <!-- Receta 1 -->
-    <receta>
-        <titulo>Pasta con salsa de coliflor</titulo>
-        <tiempo>30 minutos</tiempo>
-        <dificultad>Media</dificultad>
-        <imagen>Pasta.jpg</imagen>
-        <descripcion>Una salsa vegana para la pasta, tan sabrosa y cremosa que resulta irresistible...</descripcion>
-    </receta>
-
-    <!-- Receta 2 -->
-    <receta>
-        <titulo>Galletas de avena</titulo>
-        <tiempo>40 minutos</tiempo>
-        <dificultad>Fácil</dificultad>
-        <imagen>galletas.jpg</imagen>
-        <descripcion>Estas galletas ricas y crujientes son perfectas para San Valentín...</descripcion>
-    </receta>
-
     <receta>
         <titulo>Receta X</titulo>
         <tiempo>20 minutos</tiempo>
