@@ -7,25 +7,62 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <div id="recetas-container"></div>
+    <header>
+        <img src="../img/Logo-Delicias.png" alt="Delicias Kitchen">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="en_construccion.html">Sobre mí</a></li>
+                <li><a href="llista_receptes.html">Recetas</a></li>
+                <li><a href="contacte.html">Contacto</a></li>
+                <li><a href="en_construccion.html">Otras cosas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        const xsltProcessor = new XSLTProcessor();
-        const parser = new DOMParser();
+    <main>
+        <h1>Lista de Recetas</h1>
+        <div class="listado">
+            <article>
+                <h3><a href="recepta_pasta.html">Pasta con salsa de coliflor</a></h3>
+                <p>Tiempo: 30 minutos</p>
+                <p>Dificultad: Media</p>
+                <img src="../img/Pasta.jpg" alt="Pasta con salsa de coliflor">
+                <p>Una salsa vegana para la pasta, tan sabrosa y cremosa que resulta irresistible...</p>
+            </article>
+            <article>
+                <h3><a href="recepta_galletas.html">Galletas de avena</a></h3>
+                <p>Tiempo: 40 minutos</p>
+                <p>Dificultad: Fácil</p>
+                <img src="../img/galletas.jpg" alt="Galletas de avena">
+                <p>Estas galletas ricas y crujientes son perfectas para San Valentín...</p>
+            </article>
+            <article>
+                <h3>Mijo cremoso con lentejas</h3>
+                <p>Tiempo: 25 minutos</p>
+                <p>Dificultad: Media</p>
+                <img src="../img/mijo.jpg" alt="Mijo cremoso">
+                <p>Un buen plato de mijo cremoso con lentejas y hortalizas...</p>
+            </article>
+            <article>
+                <h3>Calabacines rellenos de arroz negro</h3>
+                <p>Tiempo: 35 minutos</p>
+                <p>Dificultad: Fácil</p>
+                <img src="../img/calabacines.jpg" alt="Calabacines rellenos">
+                <p>Calabacines rellenos de arroz negro y calabaza para un plato delicioso y saludable...</p>
+            </article>
+        </div>
+    </main>
 
-        fetch('recetas.xsl')
-            .then(res => res.text())
-            .then(xslData => {
-                const xslDoc = parser.parseFromString(xslData, 'application/xml');
-                xsltProcessor.importStylesheet(xslDoc);
-                return fetch('recetas.xml');
-            })
-            .then(res => res.text())
-            .then(xmlData => {
-                const xmlDoc = parser.parseFromString(xmlData, 'application/xml');
-                const resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
-                document.getElementById('recetas-container').appendChild(resultDocument);
-            });
-    </script>
+    <footer>
+        <div class="footer-links">
+            <a href="en_construccion.html">FACEBOOK</a>
+            <a href="en_construccion.html">TWITTER</a>
+            <a href="en_construccion.html">INSTAGRAM</a>
+            <a href="en_construccion.html">PINTEREST</a>
+            <a href="en_construccion.html">EMAIL</a>
+            <a href="en_construccion.html">RSS</a>
+        </div>
+    </footer>
 </body>
 </html>
