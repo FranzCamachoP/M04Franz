@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4a148c;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: #6a1b9a;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.exercise-grid a {
+    display: block;
+    padding: 15px;
+    background-color: #7b1fa2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.exercise-grid a:hover {
+    transform: scale(1.05);
+    background-color: #9c27b0;
+}
+
+.exercise-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #7b1fa2;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.instructions {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #8e24aa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #af52bf;
+}
+
+footer {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
