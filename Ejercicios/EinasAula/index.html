@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eines per l'Aula</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Eines per l'Aula</h1>
+            <button id="toggle-theme" class="btn">Cambiar Tema</button>
+        </div>
+    </header>
+    <main>
+        <section id="ruleta" class="section">
+            <h2 class="section-title">Ruleta de Noms</h2>
+            <div class="btn-container">
+                <button id="load-names" class="btn">Cargar Nombres</button>
+                <button id="spin-wheel" class="btn">Girar Ruleta</button>
+            </div>
+            <div id="wheel"></div>
+            <p id="selected-name" class="selected-name"></p>
+        </section>
+        <section id="temporizador" class="section">
+            <h2 class="section-title">Rellotge-Temporitzador</h2>
+
+            <!-- Bloque 1: Hora Actual -->
+            <div class="clock-container">
+                <h3>Hora Actual</h3>
+                <div id="current-clock" class="digital-clock">00:00:00</div>
+            </div>
+
+            <!-- Bloque 2: Temporizador por Hora Exacta -->
+            <div class="timer-container">
+                <h3>Temporizador (Hora Exacta)</h3>
+                <input type="time" id="set-exact-time" class="input">
+                <button id="start-exact-timer" class="btn">Iniciar Temporizador</button>
+                <div id="exact-timer" class="digital-clock">00:00:00</div>
+            </div>
+
+            <!-- Bloque 3: Temporizador por Duración -->
+            <div class="timer-container">
+                <h3>Temporizador (Duración)</h3>
+                <input type="number" id="set-duration-minutes" class="input" placeholder="Duración en minutos">
+                <button id="start-duration-timer" class="btn">Iniciar Temporizador</button>
+                <select id="duration-sound-selector" class="input">
+                    <option value="./assets/sounds/alarm1.mp3">Alarma 1</option>
+                    <option value="./assets/sounds/alarm2.mp3">Alarma 2</option>
+                    <option value="./assets/sounds/alarm3.mp3">Alarma 3</option>
+                </select>
+                <div id="duration-timer" class="digital-clock">00:00:00</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eines per l'Aula. Creado por TU PADRE, digo FRANZ.</p>
+    </footer>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/ruleta.js"></script>
+    <script src="scripts/temporizador.js"></script>
+</body>
+</html>
