@@ -31,7 +31,7 @@ exactTimerButton.addEventListener("click", () => {
     const now = new Date();
     const targetTime = new Date();
     targetTime.setHours(hours, minutes, 0, 0);
-
+    
     if (targetTime <= now) {
         alert("La hora debe ser en el futuro.");
         return;
