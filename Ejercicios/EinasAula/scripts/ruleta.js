@@ -10,7 +10,7 @@ let spinning = false;
 
 const colors = ["#FF6347", "#ADD8E6", "#90EE90", "#FFA07A", "#20B2AA", "#FFD700", "#FF69B4", "#9370DB", "#FFA500", "#00FA9A"];
 const spinSound = new Audio("./assets/sounds/spin.mp3");
-const selectSound = new Audio("./assets/sounds/alarm3.mp3");
+const selectSound = new Audio("./assets/sounds/chosed.mp3");
 
 document.getElementById("load-names").addEventListener("click", async () => {
     try {
@@ -53,23 +53,20 @@ function drawWheel() {
         ctx.stroke();
 
         ctx.save();
-        ctx.translate(
-            200 + Math.cos(angle + arcSize / 2) * 150,
-            200 + Math.sin(angle + arcSize / 2) * 150
-        );
-        ctx.rotate(angle + arcSize / 2);
+        const textAngle = angle + arcSize / 2;
+        ctx.translate(200 + Math.cos(textAngle) * 150, 200 + Math.sin(textAngle) * 150);
+        ctx.rotate(textAngle);
         ctx.fillStyle = "black";
         ctx.font = "14px Arial";
         ctx.fillText(names[i], -ctx.measureText(names[i]).width / 2, 0);
         ctx.restore();
     }
 
-    // Dibujar la flecha
     ctx.fillStyle = "#000";
     ctx.beginPath();
-    ctx.moveTo(200, 10); // Punto superior de la flecha
-    ctx.lineTo(190, 40); // Esquina izquierda
-    ctx.lineTo(210, 40); // Esquina derecha
+    ctx.moveTo(200, 10);
+    ctx.lineTo(190, 40);
+    ctx.lineTo(210, 40);
     ctx.closePath();
     ctx.fill();
 }
@@ -79,7 +76,7 @@ function spinWheel() {
     spinSound.play();
 
     let spinTime = 0;
-    const spinTotal = Math.random() * 8000 + 12000; // 5-9 segundos de giro
+    const spinTotal = Math.random() * 38000 + 41000;
     const arcSize = (2 * Math.PI) / names.length;
 
     function rotate() {
@@ -90,10 +87,7 @@ function spinWheel() {
         if (spinTime < spinTotal) {
             requestAnimationFrame(rotate);
         } else {
-            const normalizedAngle = (startAngle % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
-            const selectedIndex = Math.floor(
-                (names.length - Math.floor(normalizedAngle / arcSize)) % names.length
-            );
+            const selectedIndex = names.length - 1 - Math.floor(((startAngle + Math.PI / 2) % (2 * Math.PI)) / arcSize) % names.length;
 
             setTimeout(() => {
                 spinning = false;

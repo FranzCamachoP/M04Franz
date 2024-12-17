@@ -9,14 +9,21 @@ const durationSoundSelector = document.getElementById("duration-sound-selector")
 
 let exactTimerInterval, durationTimerInterval;
 
-// Función para mostrar la hora actual
 function updateCurrentClock() {
     const now = new Date();
     currentClock.textContent = now.toLocaleTimeString("es-ES", { hour12: false });
 }
 setInterval(updateCurrentClock, 1000);
 
-// Temporizador por Hora Exacta
+function playAlarm(selectedSound) {
+    const sound = selectedSound || "./assets/sounds/alarma.mp3"; 
+    const alarm = new Audio(sound);
+
+    alarm.play().catch(error => {
+        console.error("Error al reproducir el sonido:", error);
+    });
+}
+
 exactTimerButton.addEventListener("click", () => {
     clearInterval(exactTimerInterval);
 
@@ -36,17 +43,16 @@ exactTimerButton.addEventListener("click", () => {
         if (remaining <= 0) {
             clearInterval(exactTimerInterval);
             exactTimer.textContent = "00:00:00";
-            playAlarm("./assets/sounds/alarm1.mp3");
+            playAlarm("./assets/sounds/alarma.mp3");
         } else {
-            const hours = String(Math.floor(remaining / (1000 * 60 * 60))).padStart(2, "0");
-            const minutes = String(Math.floor((remaining / (1000 * 60)) % 60)).padStart(2, "0");
-            const seconds = String(Math.floor((remaining / 1000) % 60)).padStart(2, "0");
-            exactTimer.textContent = `${hours}:${minutes}:${seconds}`;
+            const h = String(Math.floor(remaining / (1000 * 60 * 60))).padStart(2, "0");
+            const m = String(Math.floor((remaining / (1000 * 60)) % 60)).padStart(2, "0");
+            const s = String(Math.floor((remaining / 1000) % 60)).padStart(2, "0");
+            exactTimer.textContent = `${h}:${m}:${s}`;
         }
     }, 1000);
 });
 
-// Temporizador por Duración
 durationTimerButton.addEventListener("click", () => {
     clearInterval(durationTimerInterval);
 
@@ -65,18 +71,13 @@ durationTimerButton.addEventListener("click", () => {
         if (remaining <= 0) {
             clearInterval(durationTimerInterval);
             durationTimer.textContent = "00:00:00";
-            playAlarm(durationSoundSelector.value);
+            const selectedSound = durationSoundSelector.value;
+            playAlarm(selectedSound);
         } else {
-            const hours = String(Math.floor(remaining / (1000 * 60 * 60))).padStart(2, "0");
-            const minutes = String(Math.floor((remaining / (1000 * 60)) % 60)).padStart(2, "0");
-            const seconds = String(Math.floor((remaining / 1000) % 60)).padStart(2, "0");
-            durationTimer.textContent = `${hours}:${minutes}:${seconds}`;
+            const h = String(Math.floor(remaining / (1000 * 60 * 60))).padStart(2, "0");
+            const m = String(Math.floor((remaining / (1000 * 60)) % 60)).padStart(2, "0");
+            const s = String(Math.floor((remaining / 1000) % 60)).padStart(2, "0");
+            durationTimer.textContent = `${h}:${m}:${s}`;
         }
     }, 1000);
 });
-
-// Función para reproducir alarma
-function playAlarm(sound) {
-    const alarm = new Audio(sound);
-    alarm.play();
-}
