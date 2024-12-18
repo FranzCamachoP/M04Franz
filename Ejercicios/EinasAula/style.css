@@ -90,7 +90,6 @@ footer {
 }
 
 /* Ruleta */
-/* Ruleta */
 #ruleta #wheel {
     width: 350px;
     height: 350px;
@@ -153,6 +152,44 @@ footer {
 .input:focus {
     border-color: #007BFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Temporizador Bomba */
+.bomb-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bomb-img {
+    width: 150px;
+}
+
+.bomb-timer-display {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bomb-explode {
+    animation: bomb-explode 1s ease forwards;
+}
+
+@keyframes bomb-explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
 }
 
 /* Modal Styles */
@@ -222,4 +259,3 @@ footer {
     font-size: 1rem;
     margin-top: 1rem;
 }
-

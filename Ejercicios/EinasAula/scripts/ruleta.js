@@ -76,7 +76,7 @@ function spinWheel() {
     spinSound.play();
 
     let spinTime = 0;
-    const spinTotal = Math.random() * 24000 + 25000;
+    const spinTotal = Math.random() * 25000 + 26000;
     const arcSize = (2 * Math.PI) / names.length;
 
     function rotate() {
