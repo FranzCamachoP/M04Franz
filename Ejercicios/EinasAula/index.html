@@ -33,29 +33,20 @@
             </div>
             <div class="timer-container">
                 <h3>Temporizador (Hora Exacta)</h3>
-                <input type="time" id="set-exact-time" class="input">
+                <input type="timee" id="set-exact-time" class="input">
                 <button id="start-exact-timer" class="btn">Iniciar Temporizador</button>
                 <div id="exact-timer" class="digital-clock">00:00:00</div>
             </div>
-            <div class="timer-container">
-                <h3>Temporizador (Duración)</h3>
-                <input type="number" id="set-duration-minutes" class="input" placeholder="Duración en minutos">
-                <button id="start-duration-timer" class="btn">Iniciar Temporizador</button>
-                <select id="duration-sound-selector" class="input">
-                    <option value="./assets/sounds/alarm1.mp3">Alarma 1</option>
-                    <option value="./assets/sounds/alarm2.mp3">Alarma 2</option>
-                    <option value="./assets/sounds/alarm3.mp3">Alarma 3</option>
-                </select>
-                <div id="duration-timer" class="digital-clock">00:00:00</div>
-            </div>
-        </section>
 
-        <!-- Nueva sección Temporizador Bomba -->
         <section id="bomb-timer" class="section">
             <h2 class="section-title">Temporizador con Bomba</h2>
             <div class="bomb-container">
                 <img id="bomb-img" src="assets/images/bomb.png" alt="Bomba" class="bomb-img">
                 <div id="bomb-timer-display" class="bomb-timer-display">00:10</div>
+            </div>
+            
+            <div class="timer-controls">
+                <input type="number" id="bomb-time-input" class="input" placeholder="Tiempo en segundos" min="1">
             </div>
             <div class="btn-container">
                 <button id="start-bomb-timer" class="btn">Iniciar</button>
@@ -63,6 +54,7 @@
                 <button id="reset-bomb-timer" class="btn">Reiniciar</button>
             </div>
         </section>
+        
     </main>
     <footer>
         <p>&copy; 2024 Eines per l'Aula. Creado por TU PADRE, digo FRANZ.</p>
