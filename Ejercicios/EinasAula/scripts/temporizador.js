@@ -79,6 +79,15 @@ startBombTimerBtn.addEventListener("click", () => {
             bombInterval = null;
             bombImg.classList.add("bomb-explode");
             playExplosion();
+
+            startBombTimerBtn.disabled = true;
+            stopBombTimerBtn.disabled = true;
+
+            setTimeout(() => {
+                bombImg.classList.remove("bomb-explode");
+                startBombTimerBtn.disabled = false;
+                stopBombTimerBtn.disabled = false;
+            }, 1500);
         }
     }, 1000);
 });
@@ -94,5 +103,6 @@ resetBombTimerBtn.addEventListener("click", () => {
     bombTimeLeft = parseInt(bombTimeInput.value, 10) || 10;
     updateBombDisplay();
     bombImg.classList.remove("bomb-explode");
+    startBombTimerBtn.disabled = false;
+    stopBombTimerBtn.disabled = false;
 });
-
