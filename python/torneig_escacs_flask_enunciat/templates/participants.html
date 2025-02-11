@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Participants</title>
+</head>
+<body>
+    <h1>Gestionar Participants</h1>
+
+    <!-- Formulari per afegir un nou participant -->
+    <form method="POST" action="{{ url_for('participants') }}">
+        <label for="nom">Nom del Participant:</label>
+        <input type="text" id="nom" name="nom" required>
+        <button type="submit">Afegir Participant</button>
+    </form>
+
+    <h2>Llista de Participants</h2>
+    <ul>
+        {% for participant in participants %}
+            <li>{{ participant }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{{ url_for('index') }}">Torna a l'inici</a>
+</body>
+</html>

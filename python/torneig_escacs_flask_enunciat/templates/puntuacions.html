@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntuacions</title>
+</head>
+<body>
+    <h1>Puntuacions</h1>
+
+    <h2>Classificació Actual</h2>
+    <table border="1">
+        <tr>
+            <th>Jugador</th>
+            <th>Puntuació</th>
+        </tr>
+        {% for jugador, puntuacio in puntuacions.items() %}
+        <tr>
+            <td>{{ jugador }}</td>
+            <td>{{ puntuacio }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('index') }}">Torna a l'inici</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rànquing</title>
+</head>
+<body>
+    <h1>Rànquing</h1>
+
+    <ol>
+        {% for participant, puntuacio in ranking %}
+        <li><strong>{{ participant }}</strong>: {{ puntuacio }} punts</li>
+        {% endfor %}
+    </ol>
+
+    <br>
+    <a href="{{ url_for('index') }}">Torna a l'inici</a>
+</body>
+</html>

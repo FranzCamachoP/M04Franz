@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partides</title>
+</head>
+<body>
+    <h1>Partides</h1>
+
+    <h2>Jornada Actual</h2>
+    <ul>
+        {% for partida in partides %}
+            <li>{{ partida[0] }} vs {{ partida[1] }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Formulari per avançar a la següent jornada -->
+    <form method="POST" action="{{ url_for('avancar_jornada') }}">
+        <button type="submit">Avançar Jornada</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('index') }}">Torna a l'inici</a>
+</body>
+</html>
